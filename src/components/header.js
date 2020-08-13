@@ -1,32 +1,26 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Logo from "../images/miles_logo.svg"
+import "./header.scss"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+  <header>
+    <div className="header__wrapper">
+      <div className="header__wrapper__logo-container">
+        <Link to ="/">
+          {/*{siteTitle}*/}
+          <img src={Logo} alt="Logo"/>
         </Link>
-      </h1>
+      </div>
+      <div className="header__wrapper__navigation-container">
+        <div>Hol dir die App</div>
+        <div>Preise</div>
+        <div>So geht´s</div>
+        <div>Cities</div>
+        <div>FAQ</div>
+        <div>For Business</div>
+      </div>
     </div>
   </header>
 )
