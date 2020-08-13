@@ -29,16 +29,16 @@ exports.createPages = async ({ graphql, actions }) => {
 			  }
 		    }
 		`)
-	response.data.allContentfulBlogPost.edges.forEach(edge => {
-		createPage({
-			path: `/blog/${edge.node.slug}`,
-			component: path.resolve(`./src/components/blogPost${edge.node.type}.js`),
-			context: {
-				slug: edge.node.slug,
-				type: edge.node.type,
-			},
-		})
-	})
+	// response.data.allContentfulBlogPost.edges.forEach(edge => {
+	// 	createPage({
+	// 		path: `/blog/${edge.node.slug}`,
+	// 		component: path.resolve(`./src/components/blogPost${edge.node.type}.js`),
+	// 		context: {
+	// 			slug: edge.node.slug,
+	// 			type: edge.node.type,
+	// 		},
+	// 	})
+	// })
 	response.data.allContentfulSection.edges.forEach(edge => {
 		createPage({
 			path: `/section/${edge.node.title}`,

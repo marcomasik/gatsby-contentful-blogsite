@@ -35,8 +35,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `atruu98k7ms7`,
-        accessToken: `_7-_JAZEC7d84tkeeRHjFnx3sAIF0wJakCLVYduLhao`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     `gatsby-plugin-sass`,
